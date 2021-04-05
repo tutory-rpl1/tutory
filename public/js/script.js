@@ -9,12 +9,12 @@ $(function(){
     $('.modalUbah').on('click',function(){
         $('#exampleModalLabel').html('Ubah Data Mahasiswa');
         $('.modal-footer button[type=submit]').html('Ubah Data');
-        $('.modal-body form').attr('action', 'http://localhost/tutory/public/mahasiswa/ubah');
+        $('.modal-body form').attr('action', 'http://localhost/phpmvc/public/mahasiswa/ubah');
 
         const id = $(this).data('id');
-
+ 
         $.ajax({
-            url : 'http://localhost/tutory/public/mahasiswa/getubah',
+            url : 'http://localhost/phpmvc/public/mahasiswa/getubah',
             data : {id : id},
             method : 'post',
             dataType : 'json',
@@ -28,17 +28,9 @@ $(function(){
         });
 
     })
-    let togel = true 
-    $('.toggle').on('click', function(){
-        // alert('ok');
-        if(togel){
-            $(this).addClass('open');
-            togel = false;
-        }else{
-            $(this).removeClass('open');
-            togel = true;
-        }
-
-    });
+    $('.cari').hide();
+    $('#keyword').on('keyup', function(){
+        alert('ok');
+    })
 
 });

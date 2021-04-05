@@ -1,81 +1,24 @@
 <?php 
 
-
-class About extends Controller {
-    public function index(){
-
-        $data['judul'] = 'Mahasiswa';
-        $data['mhs'] = $this->model('Mahasiswa_model')->getAllMahasiswa();
+class About extends Controller{
+    public function index($nama='Tio Ramadhan', $pekerjaan = 'Gamer', $umur ="20"){
+        $data['nama'] = $nama;
+        $data['pekerjaan'] = $pekerjaan;
+        $data['umur'] = $umur;
+        $data['judul'] = 'About me';
         $this->view('template/header',$data);
-        $this->view('About/index', $data);
+        $this->view('about/index', $data);
         $this->view('template/footer');
 
     }
+    public function page(){
+        $data['judul'] = 'Pages';
 
-    public function detail($id){
-
-        $data['judul'] = 'Detail Mahasiswa';
-        $data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaById($id);
         $this->view('template/header',$data);
-        $this->view('About/detail', $data);
+        $this->view('about/page');
         $this->view('template/footer');
 
-    }
-
-    public function tambah(){
-        if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST)> 0){
-            Flasher::setFlash('berhasil','ditambahkan', 'success');
-            header('location: '. BASEURL . '/About');
-            exit;
-        }else{
-            Flasher::setFlash('gagal','ditambahkan', 'danger');
-            header('location: '. BASEURL . '/About');
-            exit;
-        }
-    }
-
-    public function hapus($id){
-        if($this->model('Mahasiswa_model')->hapusDataMahasiswa($id)> 0){
-            Flasher::setFlash('berhasil','dihapus', 'success');
-            header('location: '. BASEURL . '/About');
-            exit;
-        }else{
-            Flasher::setFlash('gagal','dihapus', 'danger');
-            header('location: '. BASEURL . '/About');
-            exit;
-        }
-    }
-
-    public function getubah(){
-        echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($_POST['id']));
-    }
-
-    public function ubah(){
-        if($this->model('Mahasiswa_model')->ubahDataMahasiswa($_POST)> 0){
-            Flasher::setFlash('berhasil','diubah', 'success');
-            header('location: '. BASEURL . '/About');
-            exit;
-        }else{
-            Flasher::setFlash('gagal','diubah', 'danger');
-            header('location: '. BASEURL . '/About');
-            exit;
-        }
-    }
-    public function cari(){
-        if(isset($_POST['keyword'])){
-            $data['judul'] = 'Mahasiswa';
-            $data['mhs'] = $this->model('Mahasiswa_model')->cariDataMahasiswa();
-            $this->view('template/header',$data);
-            $this->view('About/index', $data);
-            $this->view('template/footer');
-        }else {
-            header('location: '. BASEURL . '/About');
-            exit;
-        };
     }
 }
-
-
-
 
 ?>

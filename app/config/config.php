@@ -1,6 +1,6 @@
 <?php 
 
-define('BASEURL', 'http://localhost/tutory/public');
+define('BASEURL', 'http://localhost/phpmvc/public');
 
 
 // DB
