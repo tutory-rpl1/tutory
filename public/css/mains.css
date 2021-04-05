@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-outline-primary {
+  color: #4064E5 !important;
+  border-color: #4064E5 !important;
+}
+
+.btn-primary {
+  background-color: #4064E5 !important;
+}
+
+nav form.mt-3 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .navbar-toggler {
+  border: none !important;
+  position: relative;
+  background-color: salmon;
+  height: 43px;
+}
+
+nav .navbar-toggler:focus {
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+}
+
+nav .menu, nav .menu::before, nav .menu::after {
+  background-color: #4064E5 !important;
+  width: 40px;
+  height: 5px;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+nav .menu {
+  position: relative;
+}
+
+nav .menu::before, nav .menu::after {
+  content: '';
+  position: absolute;
+}
+
+nav .menu::after {
+  top: 10px;
+  left: 0;
+}
+
+nav .menu::before {
+  top: -10px;
+  left: 0;
+}
+
+nav .toggle.open .menu {
+  background-color: transparent;
+  -webkit-transform: translate(50px);
+          transform: translate(50px);
+}
+
+nav .navbar-toggler.open .menu::after {
+  -webkit-transform: rotate(45deg) translate(35px, -35) !important;
+          transform: rotate(45deg) translate(35px, -35) !important;
+}
+
+nav .menu::before {
+  -webkit-transform: rotate(-45deg) translate(35px, 35) !important;
+          transform: rotate(-45deg) translate(35px, 35) !important;
+}
+
+@media (min-width: 992px) {
+  nav form.mt-3 {
+    margin-top: 0rem !important;
+  }
+}
+/*# sourceMappingURL=mains.css.map */
