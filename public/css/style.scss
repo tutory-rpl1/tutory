@@ -23,7 +23,6 @@ nav{
     .navbar-toggler{
         border: none !important;
         position: relative;
-        background-color: salmon;
         height: 43px;
     }
     .navbar-toggler:focus{
@@ -52,18 +51,6 @@ nav{
     .menu::before{
         top: -10px;
         left: 0;
-    }
-
-    // animasi
-    .toggle.open .menu{
-        background-color: transparent;
-        transform: translate(50px);
-    }
-    .navbar-toggler.open .menu::after{
-        transform: rotate(45deg) translate(35px, -35) !important;
-    }
-  .menu::before{
-        transform: rotate(-45deg) translate(35px, 35) !important;
     }
 
     

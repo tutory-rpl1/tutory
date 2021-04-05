@@ -28,17 +28,5 @@ $(function(){
         });
 
     })
-    let togel = true 
-    $('.toggle').on('click', function(){
-        // alert('ok');
-        if(togel){
-            $(this).addClass('open');
-            togel = false;
-        }else{
-            $(this).removeClass('open');
-            togel = true;
-        }
-
-    });
 
 });

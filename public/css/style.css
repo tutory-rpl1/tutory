@@ -22,7 +22,6 @@ nav form.mt-3 {
 nav .navbar-toggler {
   border: none !important;
   position: relative;
-  background-color: salmon;
   height: 43px;
 }
 
@@ -60,25 +59,9 @@ nav .menu::before {
   left: 0;
 }
 
-nav .toggle.open .menu {
-  background-color: transparent;
-  -webkit-transform: translate(50px);
-          transform: translate(50px);
-}
-
-nav .navbar-toggler.open .menu::after {
-  -webkit-transform: rotate(45deg) translate(35px, -35) !important;
-          transform: rotate(45deg) translate(35px, -35) !important;
-}
-
-nav .menu::before {
-  -webkit-transform: rotate(-45deg) translate(35px, 35) !important;
-          transform: rotate(-45deg) translate(35px, 35) !important;
-}
-
 @media (min-width: 992px) {
   nav form.mt-3 {
     margin-top: 0rem !important;
   }
 }
-/*# sourceMappingURL=mains.css.map */
+/*# sourceMappingURL=style.css.map */
