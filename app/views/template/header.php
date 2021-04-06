@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarTogglerDemo02">
   
       <form class="d-flex mt-3 flex-lg-row">
-        <button class="btn btn-outline-primary mt-2" type="submit">Sign in</button>
+        <button class="btn btn-outline-primary mt-2 sign-in" type="submit">Sign in</button>
         <button class="btn btn-primary ms-lg-2 mt-2" type="submit">Sign up</button>
       </form>
     </div>

@@ -4,7 +4,9 @@ $fontColor : #333333;
 $heading : bold 34px 'Poppins', sans-serif;
 $body : 400 21px 'Poppins', sans-serif;
 $caption : 400 16px 'Poppins', sans-serif;
-
+body{
+    height: 200vh;
+}
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -14,6 +16,16 @@ $caption : 400 16px 'Poppins', sans-serif;
 }
 .btn-primary{
     background-color: $primary !important;
+}
+h1{
+    font: $heading !important;
+}
+p{
+    font: $body !important;
+    margin-bottom: 0;
+}
+span{
+    font: $caption !important;
 }
 nav{
     form.mt-3{
@@ -52,10 +64,32 @@ nav{
         top: -10px;
         left: 0;
     }
-
+    .sign-in:hover{
+        background-color: white !important;
+    }
     
 
 }
+
+.container{
+    .banner{
+        flex-direction: column-reverse;
+        row-gap: 80px;
+        .main{
+                text-align: center;
+        }
+        .cari{
+            margin-top: 20px;
+        }
+    }
+
+    .part2{
+        margin-top: 150px;
+        text-align: center;
+
+    }
+}
+    
 
 // RESPONSIVE
 @media (min-width: 992px) { 
@@ -64,6 +98,13 @@ nav{
             margin-top: 0rem !important;
         }
     
+    }
+    .container{
+        .banner{
+            .main{
+                text-align: start;
+            }
+        }
     }
     
 }

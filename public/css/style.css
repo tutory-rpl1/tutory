@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+body {
+  height: 200vh;
+}
+
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -10,6 +14,19 @@
 
 .btn-primary {
   background-color: #4064E5 !important;
+}
+
+h1 {
+  font: bold 34px "Poppins", sans-serif !important;
+}
+
+p {
+  font: 400 21px "Poppins", sans-serif !important;
+  margin-bottom: 0;
+}
+
+span {
+  font: 400 16px "Poppins", sans-serif !important;
 }
 
 nav form.mt-3 {
@@ -59,9 +76,37 @@ nav .menu::before {
   left: 0;
 }
 
+nav .sign-in:hover {
+  background-color: white !important;
+}
+
+.container .banner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  row-gap: 80px;
+}
+
+.container .banner .main {
+  text-align: center;
+}
+
+.container .banner .cari {
+  margin-top: 20px;
+}
+
+.container .part2 {
+  margin-top: 150px;
+  text-align: center;
+}
+
 @media (min-width: 992px) {
   nav form.mt-3 {
     margin-top: 0rem !important;
+  }
+  .container .banner .main {
+    text-align: start;
   }
 }
 /*# sourceMappingURL=style.css.map */
