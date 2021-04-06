@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="<?= BASEURL ?>/css/bootstrap.css" >
     <link rel="stylesheet"  href="<?= BASEURL ?>/css/style.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <title><?= $data['judul'] ?></title>
 </head>
 <body>
@@ -14,9 +15,9 @@
     <a class="navbar-brand" href="<?= BASEURL ?>">
       <img src="<?= BASEURL ?>/img/logotutory.png" alt="" width="100"class="d-inline-block align-text-top" >
     </a>
-    <button class="navbar-toggler toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="menu"></div>
-    </button>
+    <div class="navbar-toggler menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="box"></div>
+    </div>
     <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarTogglerDemo02">
   
       <form class="d-flex mt-3 flex-lg-row">

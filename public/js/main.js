@@ -28,5 +28,19 @@ $(function(){
         });
 
     })
+    let toggle = true;
+    $('.menu').on('click', function(){
+    if(toggle){
+    $(this).addClass('open');
+    toggle = false;
+        }else{
+        $(this).removeClass('open');
+        toggle = true;
+        };
+    });
+
+    $('.panels').on('click', function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
 
 });
