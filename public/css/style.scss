@@ -131,6 +131,7 @@ nav{
             }
         }
         .active{
+            transition: .3s;
             background-color: $primary;
             a{
                 color: white !important;
@@ -231,6 +232,13 @@ a{
 }
 .tombol:hover{
     background-color: rgba($primary, 1) !important;
+}
+
+.last{
+    height: 200px;
+    width: 200vh;
+    background-color: $primary !important;
+    color: white;
 }
 
 // RESPONSIVE

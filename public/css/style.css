@@ -159,6 +159,8 @@ nav .sign-in:hover {
 }
 
 .event .panel .active {
+  -webkit-transition: .3s;
+  transition: .3s;
   background-color: #4064E5;
 }
 
@@ -283,6 +285,13 @@ a {
 
 .tombol:hover {
   background-color: #4064e5 !important;
+}
+
+.last {
+  height: 200px;
+  width: 200vh;
+  background-color: #4064E5 !important;
+  color: white;
 }
 
 @media (min-width: 992px) {
