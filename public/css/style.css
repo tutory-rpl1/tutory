@@ -289,9 +289,13 @@ a {
 
 .last {
   height: 200px;
-  width: 200vh;
   background-color: #4064E5 !important;
   color: white;
+}
+
+.testimoni .testi {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 @media (min-width: 992px) {
@@ -305,6 +309,10 @@ a {
     margin-top: 30px;
   }
   .hero {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .testimoni .testi {
     -webkit-transform: scale(1);
             transform: scale(1);
   }

@@ -236,9 +236,11 @@ a{
 
 .last{
     height: 200px;
-    width: 200vh;
     background-color: $primary !important;
     color: white;
+}
+.testimoni .testi{
+    transform: scale(.6);
 }
 
 // RESPONSIVE
@@ -263,6 +265,10 @@ a{
         transform: scale(1);
         // width: 100%;
     }
+    .testimoni .testi{
+        transform: scale(1);
+    }
+    
     
 }
 

@@ -28,15 +28,10 @@ $(function(){
         });
 
     })
-    let toggle = true;
     $('.menu').on('click', function(){
-    if(toggle){
-    $(this).addClass('open');
-    toggle = false;
-        }else{
-        $(this).removeClass('open');
-        toggle = true;
-        };
+    
+    $(this).toggleClass('open');
+    
     });
 
     $('.panels').on('click', function(){
