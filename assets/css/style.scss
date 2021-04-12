@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+$heading : bold 34px 'Poppins', sans-serif;
+$body : 400 21px 'Poppins', sans-serif;
+$caption : 400 16px 'Poppins', sans-serif;
+$primary : #4064E5;
+body{
+    overflow-x: hidden !important;
+}
+h1{
+    font: $heading !important;
+}
+p{
+    font: $body !important;
+    margin-bottom: 0;
+}
+span{
+    font: $caption !important;
+}
+
+// end of aturan
+
+
+.btn-outline-primary{
+    color: $primary !important;
+    border-color: $primary !important;
+}
+.btn-primary{
+    background-color: $primary !important;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.menu{
+    width : 40px;
+    height : 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 9999;
+
+}
+.box, .box::after, .box::before{
+    width : 40px;
+    height : 5px;
+    background-color : $primary;
+    border-radius : 5px;
+   transition : all .5s;
+   }
+ 
+ .box::after,.box::before{
+    content :'';
+    position : absolute;
+   }
+ 
+ .box::after{
+    transform : translateY(10px);
+   }
+ 
+ .box::before{
+    transform : translateY(-10px);
+   }
+ 
+ .menu.open .box{
+    transform : rotate(45deg);
+    background : transparent;
+    position: fixed;
+   }
+ 
+ .menu.open .box::before{
+    transform :  rotate(0deg)
+  
+   }
+ 
+ .menu.open .box::after{
+    transform : rotate(-90deg)
+  
+}
+
+
+.form-control{
+    font: $caption !important ;
+}
+
+.tutory::after{
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: -13px;
+    width: 37px;
+    height: 37px;
+    background-color: $primary;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.tutory{
+    position: relative;
+    z-index: 1;
+}
+
+
+// EVENTS
+.card{
+    box-shadow: 5px 10px 10px rgba(0,0,0,.1);
+    border: none;
+    cursor: pointer;
+}
+
+// tutur
+.hero{
+    transform: scale(1);
+}
+@media (max-width: 992px) { 
+    .links{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: circle(0% at 100vw 0);
+        transition: .5s;
+        box-shadow: 5px 10px #888888;
+    z-index: 9999;
+
+    }
+
+   .reveal.links{
+        clip-path: circle(100% at 100vw 0);
+        position: fixed;
+        z-index: 9999;
+
+    }
+    
+
+ }
+
