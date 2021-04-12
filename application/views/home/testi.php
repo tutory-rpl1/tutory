@@ -1,10 +1,12 @@
 <div class="container">
     <section class="row testimoni d-flex justify-content-center mt-5">
+
         <div class="judul col-lg-6 mt-auto mb-auto ">
 
             <h1 class="tutory">Apa Kata Mereka</h1>
         </div>
-        <div id="carouselExampleCaptions" class="carousel slide col-lg-6 testi" data-bs-ride="carousel">
+
+        <div id="carouselExampleCaptions" class="carousel slide col-lg-6 testi mt-lg-0 mt-5" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>

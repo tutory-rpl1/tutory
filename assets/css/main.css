@@ -106,15 +106,50 @@ span {
 }
 
 .card {
-  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
-  border: none;
   cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+}
+
+.text-gray {
+  color: #a8a8a8 !important;
+  font-weight: 200 !important;
+}
+
+.border {
+  border: 1px solid #e5e5e5 !important;
+}
+
+.shadow-none:hover {
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.testi {
+  -webkit-transform: scale(0.6) !important;
+          transform: scale(0.6) !important;
+}
+
+.modal-dialog {
+  max-width: 1000px !important;
 }
 
 @media (max-width: 992px) {
@@ -149,4 +184,66 @@ span {
     z-index: 9999;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+.fadein {
+  -webkit-animation: fadein .6s linear alternate forwards;
+          animation: fadein .6s linear alternate forwards;
+}
+
+.bounce {
+  -webkit-animation: bounce .3s linear alternate forwards;
+          animation: bounce .3s linear alternate forwards;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */

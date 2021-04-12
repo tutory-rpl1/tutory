@@ -102,14 +102,45 @@ span{
 
 // EVENTS
 .card{
-    box-shadow: 5px 10px 10px rgba(0,0,0,.1);
-    border: none;
     cursor: pointer;
+    transition: .5s;
+    box-shadow: 0 10px 20px rgba(0,0, 0,0);
+}
+.card:hover{
+  
+    box-shadow: 0 10px 20px rgba(0, 0, 0,.2);
 }
 
-// tutur
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+}
+.text-gray{
+    color: #a8a8a8!important;
+    font-weight: 200 !important;
+}
+.border{
+    border: 1px solid #e5e5e5 !important;
+}
+.shadow-none:hover {
+    box-shadow: 5px 10px 10px rgba(0, 0, 0,.2);
+}
+
+
+// tutor
 .hero{
     transform: scale(1);
+}
+
+
+// testimoni
+.testi{
+    transform: scale(.6) !important;
+}
+// modal
+.modal-dialog{
+    max-width: 1000px !important;
 }
 @media (max-width: 992px) { 
     .links{
@@ -139,3 +170,35 @@ span{
 
  }
 
+
+
+// ANIMATION
+.fadein{
+    // display: none !important;
+    animation: fadein .6s linear alternate forwards ;
+}
+.bounce{
+    animation: bounce .3s linear alternate forwards ;
+}
+@keyframes fadein {
+    from {
+        transform: translateY(20px) ;
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: scale(3) ;
+        opacity: 0;
+    }
+    to {
+        transform:  scale(1);
+        opacity: 1;
+
+    }
+}
