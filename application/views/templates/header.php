@@ -18,4 +18,4 @@
     <title><?= $title ?></title>
 </head>
 
-<body>
+<body class="bg-light">

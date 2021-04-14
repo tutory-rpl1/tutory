@@ -15,7 +15,7 @@
             <?php for ($i = 0; $i < 5; $i++) : ?>
                 <div class="col-11 col-lg-4 mb-4">
 
-                    <div class="card border" onclick="window.location = '<?= base_url() ?>view'">
+                    <div class="card border-0" onclick="window.location = '<?= base_url() ?>kelas'">
                         <div class="card-body ">
                             <div class="thumbanail overflow-hidden mb-3" style="height:170px;">
                                 <img src="https://images.unsplash.com/photo-1560762484-813fc97650a0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt="">
@@ -41,7 +41,7 @@
                             <hr>
                             <div class="row align-items-center no-gutters">
                                 <div class="col-auto">
-                                    <div class="img-tutor overflow-hidden rounded-circle" style="width:50px; height:50px;">
+                                    <div class=" overflow-hidden rounded-circle" style="width:50px; height:50px;">
                                         <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" width="100%">
                                     </div>
                                 </div>

@@ -152,6 +152,28 @@ hr {
   max-width: 1000px !important;
 }
 
+.card-info {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.gabung {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.gabung:hover {
+  background-color: #4064E5 !important;
+}
+
+.img-tutor {
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+}
+
 @media (max-width: 992px) {
   .links {
     position: absolute;
@@ -193,6 +215,11 @@ hr {
 .bounce {
   -webkit-animation: bounce .3s linear alternate forwards;
           animation: bounce .3s linear alternate forwards;
+}
+
+.slideright {
+  -webkit-animation: slideright  .6s  linear alternate forwards;
+          animation: slideright  .6s  linear alternate forwards;
 }
 
 @-webkit-keyframes fadein {
@@ -243,6 +270,32 @@ hr {
   to {
     -webkit-transform: scale(1);
             transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideright {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideright {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }

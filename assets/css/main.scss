@@ -142,6 +142,23 @@ hr {
 .modal-dialog{
     max-width: 1000px !important;
 }
+.card-info{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.gabung{
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.gabung:hover{
+    background-color: $primary !important;
+ 
+}
+.img-tutor{
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+}
 @media (max-width: 992px) { 
     .links{
         position: absolute;
@@ -180,6 +197,9 @@ hr {
 .bounce{
     animation: bounce .3s linear alternate forwards ;
 }
+.slideright{
+    animation: slideright  .6s  linear alternate forwards ;
+}
 @keyframes fadein {
     from {
         transform: translateY(20px) ;
@@ -198,6 +218,18 @@ hr {
     }
     to {
         transform:  scale(1);
+        opacity: 1;
+
+    }
+}
+
+@keyframes slideright {
+    from {
+        transform: translateX(-100px) ;
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) ;
         opacity: 1;
 
     }

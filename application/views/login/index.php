@@ -5,25 +5,25 @@
         </div>
     </div>
     <div class="row align-items-center d-flex flex-lg-row flex-column-reverse justify-content-between">
-        <div class="col-lg-4 px-lg-0 px-5 ">
+        <div class="col-lg-4 px-lg-0 px-5 fadein">
             <H1>
                 Login dulu ya!
             </H1>
             <form action="" method="post">
                 <div class="form-group mt-3">
-                    <input type="text" placeholder="Email" name="password" class="form-control input" autocomplete="off">
+                    <input type="text" placeholder="Email" name="password" class="form-control input rounded-pill" autocomplete="off">
                 </div>
                 <div class="form-group mt-3">
-                    <input type="password" placeholder="Password" class="form-control input" name="password">
+                    <input type="password" placeholder="Password" class="form-control input rounded-pill" name="password">
                 </div>
                 <div class="form-group mt-3">
-                    <button type="submit" class="btn btn-primary" class="form-control" name="submit">Login</button>
+                    <button type="submit" style="width : 100px; border-radius : 50rem;" class="btn btn-primary" class="form-control rounded rounded-pill" name="submit">Login</button>
                 </div>
             </form>
             <p class="fs-6 mt-3">Belum punya akun?<a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-primary" style="text-decoration: none;"> Buat Akun </a></p>
             <p class="fs-6"><a href="" lass="text-primary" style="text-decoration: none;"> Lupa Password </a></p>
         </div>
-        <div class="col-lg-6 text-center ">
+        <div class="col-lg-6 text-center fadein">
             <img src="<?= base_url() ?>assets/img/login.png" alt="login banner">
 
         </div>

@@ -7,8 +7,8 @@
                 mahasiswa iPB University</span>
             <a><button class="btn btn-primary cari mt-lg-2 mt-4">Cari tutor</button></a>
         </div>
-        <div class="col-lg-6">
-            <img src="<?= base_url() ?>assets/img/hero.png" alt="" width="100%" class="hero bounce">
+        <div class="col-lg-6 slideright">
+            <img src="<?= base_url() ?>assets/img/hero.png" alt="" width="100%" class="hero ">
         </div>
     </div>
 </div>
