@@ -14,8 +14,8 @@
                         <h1 class="tutory pt-5">Yuk pilih dulu !</h1>
                         <div class="pilih d-flex flex-column align-items-stretch mt-5 ">
 
-                            <a href="<?= base_url() ?>daftar/pelajar" class="btn btn-outline-primary ">Daftar sebagai Pelajar</a>
-                            <a href="<?= base_url() ?>daftar/tutor" class="btn btn-primary mt-3">Daftar sebagai tutor</a>
+                            <a href="<?= base_url() ?>Auth/regisPelajar" class="btn btn-outline-primary ">Daftar sebagai Pelajar</a>
+                            <a href="<?= base_url() ?>Auth/regisTutor" class="btn btn-primary mt-3">Daftar sebagai tutor</a>
                         </div>
                     </div>
                 </div>

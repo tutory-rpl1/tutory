@@ -1,9 +1,16 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class daftar extends CI_Controller
+class Auth extends CI_Controller
 {
-    public function daftar()
+    public function index()
+    {
+        $data['title'] = 'Login tutory';
+        $this->load->view('templates/header', $data);
+        $this->load->view('login/index', $data);
+        $this->load->view('templates/footer');
+    }
+    public function regisPelajar()
     {
         $data['title'] = 'Tutory';
         $this->load->view('templates/header', $data);
@@ -11,7 +18,7 @@ class daftar extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function tutor()
+    public function regisTutor()
     {
         $data['title'] = 'Tutory';
         $this->load->view('templates/header', $data);
