@@ -23,13 +23,11 @@ $(function(){
             success : function(data){
                 let res = data;
                 $.each(res, function(i,data){
-                    $('.jurusan').append(`<option value=`+data.jurusan +` name="jurusan">`+data.jurusan+ `</option>`)
-                    // console.log(data);
+                    $('.jurusan').append(`<option value="`+data.jurusan+`">`+ data.jurusan +`</option>`);
                 })
                     
                 // $('.jurusan').val(data);
             }
         });
     })
-
 });

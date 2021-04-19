@@ -9,15 +9,21 @@
             <H1>
                 Login dulu ya!
             </H1>
-            <form action="" method="post">
+            <?php if ($this->session->flashdata('message')) : ?>
+                <?= $this->session->flashdata('message'); ?>
+                <?php unset($_SESSION['message']) ?>
+            <?php endif; ?>
+            <form action="<?= base_url() ?>auth" method="post">
                 <div class="form-group mt-3">
-                    <input type="text" placeholder="Email" name="password" class="form-control input rounded-pill" autocomplete="off">
+                    <input type="text" placeholder="Email" name="email" class="form-control input rounded-pill" autocomplete="off" value="<?= set_value('email') ?>">
+                    <?= form_error('email', '<small class="text-danger ms-3">', '</small>')  ?>
+
                 </div>
                 <div class="form-group mt-3">
                     <input type="password" placeholder="Password" class="form-control input rounded-pill" name="password">
                 </div>
                 <div class="form-group mt-3">
-                    <button type="submit" style="width : 100px; border-radius : 50rem;" class="btn btn-primary" class="form-control rounded rounded-pill" name="submit">Login</button>
+                    <button type="submit" style="width : 100px; border-radius : 50rem;" class="btn btn-primary" class="form-control rounded rounded-pill" name="login">Login</button>
                 </div>
             </form>
             <p class="fs-6 mt-3">Belum punya akun?<a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-primary" style="text-decoration: none;"> Buat Akun </a></p>
