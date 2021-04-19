@@ -149,7 +149,7 @@ hr {
 }
 
 .modal-dialog {
-  max-width: 1000px !important;
+  min-width: 1000px !important;
 }
 
 .card-info {

@@ -140,8 +140,9 @@ hr {
 }
 // modal
 .modal-dialog{
-    max-width: 1000px !important;
+    min-width: 1000px !important;
 }
+
 .card-info{
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
