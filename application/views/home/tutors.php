@@ -15,14 +15,22 @@
     <?php endif; ?>
 
     <div class="row mt-5 d-flex justify-content-center text-center">
-        <?php for ($i = 0; $i < 5; $i++) : ?>
-            <div class="col-md-4 foto-tutor mb-5">
-                <img src="https://source.unsplash.com/random/200x200" alt="" class="item-link mb-1 hero img-profile rounded-circle">
-                <p class="fw-bold">Budi</p>
-                <span class="nim">G64190045</span>
+        <?php foreach ($tutors as $tutor) : ?>
+            <div class="col-md-4 foto-tutor mb-5 d-flex align-items-center flex-column">
+                <?php if ($this->session->userdata('role_id') == 3) : ?>
+                    <div class="item-link" onclick="window.location.href='<?= base_url('pelajar/detailTutor/') . $tutor['id'] ?>'">
+                    <?php else : ?>
+                        <div class="item-link" onclick="window.location.href='<?= base_url('home/viewTutor/') . $tutor['id'] ?>'">
+                        <?php endif; ?>
+                        <div class="image  rounded-circle overflow-hidden" style="width: 200px; height : 200px;">
+                            <img src="<?= base_url() ?>assets/img/profile/<?= $tutor['image'] ?>" alt="" class="mb-1 hero img-profile" style="width: 100%;">
+                        </div>
+                        <p class="fw-bold"><?= $tutor['nama'] ?></p>
+                        <span class="nim"><?= $tutor['nim'] ?></span>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
             </div>
-        <?php endfor; ?>
 
     </div>
-
-</div>

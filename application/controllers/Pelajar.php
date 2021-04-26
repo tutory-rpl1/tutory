@@ -28,9 +28,21 @@ class Pelajar extends CI_Controller
     {
         $data['user'] = $this->db->get_where('mahasiswa', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Cari tutor';
+        $data['tutors'] = $this->db->get('tutor')->result_array();
         $this->load->view('templates/header', $data);
         $this->load->view('pelajar/navbar', $data);
         $this->load->view('home/tutors', $data);
+        $this->load->view('templates/about', $data);
+        $this->load->view('templates/footer');
+    }
+    public function detailTutor($id)
+    {
+        $data['tutor'] = $this->db->get_where('tutor', array('id' => $id))->row_array();
+        $data['user'] = $this->db->get_where('mahasiswa', ['email' => $this->session->userdata('email')])->row_array();
+        $data['title'] = 'Lihat profil tutor';
+        $this->load->view('templates/header', $data);
+        $this->load->view('pelajar/navbar', $data);
+        $this->load->view('tutor/detail', $data);
         $this->load->view('templates/about', $data);
         $this->load->view('templates/footer');
     }

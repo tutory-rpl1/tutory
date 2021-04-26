@@ -14,6 +14,7 @@ class Home extends CI_Controller
     }
     public function index()
     {
+        $data['tutors'] = $this->db->get('tutor')->result_array();
         $data['title'] = 'Tutory';
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar', $data);
@@ -21,6 +22,17 @@ class Home extends CI_Controller
         $this->load->view('home/event', $data);
         $this->load->view('home/tutors', $data);
         $this->load->view('home/testi', $data);
+        $this->load->view('templates/about', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function viewTutor($id)
+    {
+        $data['user'] = $this->db->get_where('tutor', array('id' => $id))->row_array();
+        $data['title'] = 'Lihat profil tutor';
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/navbar', $data);
+        $this->load->view('tutor/index', $data);
         $this->load->view('templates/about', $data);
         $this->load->view('templates/footer');
     }
