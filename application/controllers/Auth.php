@@ -36,10 +36,10 @@ class Auth extends CI_Controller
         $password = $this->input->post('password');
 
         $user = $this->db->get_where('mahasiswa', ['email' => $email])->row_array();
+        $user2 = $this->db->get_where('tutor', ['email' => $email])->row_array();
 
-        // jika usernya ada
+        // jika usernya aktif
         if ($user) {
-            // jika usernya aktif
             if ($user['is_active'] == 1) {
                 // cek password
                 if (password_verify($password, $user['password'])) {
@@ -48,17 +48,26 @@ class Auth extends CI_Controller
                         'role_id' => $user['role_id']
                     ];
                     $this->session->set_userdata($data);
-                    if ($user['role_id'] == 1) {
-                        redirect('admin');
-                    } else if ($user['role_id'] == 2) {
-                        redirect('tutor');
-                    } else redirect('pelajar');
+                    redirect('pelajar');
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password salah!</div>');
                     redirect('auth');
                 }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email ini belum aktif</div>');
+                redirect('auth');
+            }
+        } else if ($user2) {
+            // cek password
+            if (password_verify($password, $user2['password'])) {
+                $data = [
+                    'email' => $user2['email'],
+                    'role_id' => $user2['role_id']
+                ];
+                $this->session->set_userdata($data);
+                redirect('tutor');
+            } else {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password salah!</div>');
                 redirect('auth');
             }
         } else {
@@ -125,8 +134,9 @@ class Auth extends CI_Controller
             'is_unique' => 'Email ini telah digunakan'
             // 'email_check' => 'Harus menggunakan email IPB University'
         ]);
-        $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password2]', [
+        $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password2]|is_unique[tutor.password]', [
             'matches' => 'Password tidak sama',
+            'is_unique' => 'Password telah digunakan pada akun yang sama',
             'min_length' => 'Password terlalu pendek'
         ]);
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');

@@ -1,7 +1,7 @@
 <div class="container pt-5 ">
     <div class="row">
         <div class="col px-lg-0 px-5 ">
-            <h1 class="tutory">Tutory</h1>
+            <h1 class="tutory item-link" onclick="window.location.href='<?= base_url() ?>'">Tutory</h1>
         </div>
     </div>
     <div class="row align-items-center d-flex flex-lg-row flex-column-reverse justify-content-between">

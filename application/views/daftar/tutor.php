@@ -56,14 +56,15 @@
                 <input type="text" class="form-control rounded-pill" id="email" name="email" placeholder="Email" value="<?= set_value('email') ?>">
                 <?= form_error('email', '<small class="text-danger ms-3">', '</small>')  ?>
             </div>
-            <div class="mb-3">
+            <div class="mb-1">
                 <input type="password" class="form-control rounded-pill" id="password" name="password1" placeholder="Password">
+                <small for="" class="ms-3" style="font-size: .8em;">*Gunakan password yang berbeda, jika email kamu sudah ada di akun pelajar</small>
                 <?= form_error('password1', '<small class="text-danger ms-3">', '</small>')  ?>
             </div>
-            <div class="mb-3">
+            <div class="mb-1">
                 <input type="password" class="form-control rounded-pill" id="password" name="password2" placeholder="Ulangi Password">
             </div>
-            <small class="" style="font-size: .8em;">Dengan membuat akun, anda menyetujui <a href="" class="text-primary" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#guide">syarat dan ketentuan tutory </a>
+            <small class="ms-3" style="font-size: .8em;">Dengan membuat akun, anda menyetujui <a href="" class="text-primary" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#guide">syarat dan ketentuan tutory </a>
             </small><br>
             <button class="btn btn-primary mt-3 rounded-pill " type="submit" name="create">Buat akun</button>
             </form>

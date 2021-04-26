@@ -17,7 +17,7 @@
     <div class="row mt-5 d-flex justify-content-center text-center">
         <?php for ($i = 0; $i < 5; $i++) : ?>
             <div class="col-md-4 foto-tutor mb-5">
-                <img src="https://source.unsplash.com/random/200x200" alt="" class="mb-1 hero img-profile rounded-circle">
+                <img src="https://source.unsplash.com/random/200x200" alt="" class="item-link mb-1 hero img-profile rounded-circle">
                 <p class="fw-bold">Budi</p>
                 <span class="nim">G64190045</span>
             </div>

@@ -12,7 +12,7 @@
                 <?= $this->session->flashdata('message'); ?>
                 <?php unset($_SESSION['message']) ?>
             <?php endif; ?>
-            <?= form_open_multipart('pelajar/prosesEdit'); ?>
+            <?= form_open_multipart('tutor/prosesEdit'); ?>
             <div class="data mb-5">
                 <label for="nama">Nama :</label>
                 <input type="text" class="form-control rounded-pill mb-3" value="<?= $user['nama'] ?>" name="nama" id="nama">
@@ -55,7 +55,7 @@
             <div class="aksi">
                 <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
-                <a onclick="window.location = '<?= base_url('pelajar/profile')  ?>'" class="btn btn-outline-primary">batal</a>
+                <a onclick="window.location = '<?= base_url('tutor')  ?>'" class="btn btn-outline-primary">batal</a>
             </div>
         </div>
     </div>

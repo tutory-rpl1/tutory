@@ -21,13 +21,6 @@ span{
 // end of aturan
 
 
-.btn-outline-primary{
-    color: $primary !important;
-    border-color: $primary !important;
-}
-.btn-primary{
-    background-color: $primary !important;
-}
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -99,6 +92,25 @@ span{
     position: relative;
     z-index: 1;
 }
+
+.tutoryT::after{
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: -13px;
+    width: 37px;
+    height: 37px;
+    border: 4px solid $primary;
+    background-color: transparent;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.tutoryT{
+    position: relative;
+    z-index: 1;
+}
+
 
 
 // EVENTS

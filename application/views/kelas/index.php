@@ -37,7 +37,11 @@
                     </div>
                 </div>
             </div>
-            <p class="gabung bg-primary d-flex justify-content-center align-items-center" style="height: 75px; color : white" onclick="window.location.href='http://youtube.com'">Gabung</p>
+            <?php if (!$this->session->userdata('email')) : ?>
+                <a class="fs-5 fw-700 gabung bg-primary d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" href="<?= base_url('Auth') ?>">Gabung</a>
+            <?php else : ?>
+                <a class="fs-5 fw-700 gabung bg-primary d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" href="http://youtube.com" target="_blank">Gabung</a>
+            <?php endif; ?>
         </div>
     </div>
 </div>

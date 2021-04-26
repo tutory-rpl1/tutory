@@ -3,7 +3,7 @@
 
         <div class="row  text-center">
             <div class="col mt-5 pt-5 d-flex justify-content-around">
-                <button class="btn  panel">All</button>
+                <button class="btn  panel bg-primary text-light">All</button>
                 <button class="btn  panel">KOM 205</button>
                 <button class="btn  panel">KOM 322</button>
                 <button class="btn  panel">KOM 207</button>

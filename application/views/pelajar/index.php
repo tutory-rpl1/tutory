@@ -1,7 +1,5 @@
 <div class="container">
-    <div class="row mb-3">
-        <p>My Profile</p>
-    </div>
+
     <div class="row">
         <div class="col-lg-6">
             <div class="img rounded-circle overflow-hidden ms-lg-4" style="width : 500px; height : 500px;">
@@ -9,6 +7,7 @@
             </div>
         </div>
         <div class="col-lg-6">
+            <p>My Profile</p>
             <?php if ($this->session->flashdata('message')) : ?>
                 <?= $this->session->flashdata('message'); ?>
                 <?php unset($_SESSION['message']) ?>

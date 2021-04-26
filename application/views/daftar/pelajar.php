@@ -42,6 +42,7 @@
                 </div>
                 <div class="mb-3">
                     <input type="password" class="form-control rounded-pill" name="password1" placeholder="Password">
+                    <small for="" class="ms-3" style="font-size: .8em;">*Gunakan password yang berbeda, jika email kamu sudah ada di akun tutor</small>
                     <?= form_error('password1', '<small class="text-danger ms-3">', '</small>')  ?>
 
                 </div>
@@ -49,7 +50,7 @@
                     <input type="password" class="form-control rounded-pill" name="password2" placeholder="Ulangi Password">
 
                 </div>
-                <small class="" style="font-size: .8em;">Dengan membuat akun, anda menyetujui <a href="" class="text-primary" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#guide">syarat dan ketentuan tutory </a>
+                <small class="ms-3" style="font-size: .8em;">Dengan membuat akun, anda menyetujui <a href="" class="text-primary" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#guide">syarat dan ketentuan tutory </a>
                 </small><br>
                 <button class="btn btn-primary mt-3 rounded-pill " type="submit" name="regis">Buat akun</button>
             </form>

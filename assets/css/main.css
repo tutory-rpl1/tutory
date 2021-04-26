@@ -16,15 +16,6 @@ span {
   font: 400 16px "Poppins", sans-serif !important;
 }
 
-.btn-outline-primary {
-  color: #4064E5 !important;
-  border-color: #4064E5 !important;
-}
-
-.btn-primary {
-  background-color: #4064E5 !important;
-}
-
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -101,6 +92,24 @@ span {
 }
 
 .tutory {
+  position: relative;
+  z-index: 1;
+}
+
+.tutoryT::after {
+  position: absolute;
+  content: '';
+  top: 0px;
+  left: -13px;
+  width: 37px;
+  height: 37px;
+  border: 4px solid #4064E5;
+  background-color: transparent;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.tutoryT {
   position: relative;
   z-index: 1;
 }

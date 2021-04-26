@@ -87,7 +87,11 @@ class Pelajar extends CI_Controller
                     $new_image = $this->upload->data('file_name');
                     $this->db->set('image', $new_image);
                 } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Gambar harus sesuai dengan format</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Gambar harus sesuai dengan format<br>
+                    <ul>
+                        <li>Format file harus png, jpg, atau gif</li>
+                        <li>Size gambar harus kurang dari 1 mb</li>
+                    </ul></div>');
 
                     redirect('pelajar/edit');
 
