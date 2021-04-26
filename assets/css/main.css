@@ -207,6 +207,10 @@ hr {
   }
 }
 
+.item-link {
+  cursor: pointer !important;
+}
+
 .fadein {
   -webkit-animation: fadein .6s linear alternate forwards;
           animation: fadein .6s linear alternate forwards;

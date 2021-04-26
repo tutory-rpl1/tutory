@@ -16,4 +16,8 @@ class Tutor extends CI_Controller
     {
         echo 'Selamat datang tutor';
     }
+    public function getAllTutor()
+    {
+        echo  'HALOOO';
+    }
 }

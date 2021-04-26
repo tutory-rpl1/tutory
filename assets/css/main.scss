@@ -3,6 +3,7 @@ $heading : bold 34px 'Poppins', sans-serif;
 $body : 400 21px 'Poppins', sans-serif;
 $caption : 400 16px 'Poppins', sans-serif;
 $primary : #4064E5;
+
 body{
     overflow-x: hidden !important;
 }
@@ -186,6 +187,10 @@ hr {
     }
     
 
+ }
+
+ .item-link{
+     cursor: pointer !important;
  }
 
 

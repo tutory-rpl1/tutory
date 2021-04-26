@@ -1,4 +1,5 @@
 $(function(){
+    // alert('OK');
 
 
     $('.menu').on('click', function(){
@@ -8,7 +9,8 @@ $(function(){
     });
     
     $('.panel').on('click', function(){
-        $(this).addClass('bg-light').siblings().removeClass('bg-light');
+        $(this).addClass('bg-primary').siblings().removeClass('bg-primary');
+        $(this).addClass('text-light').siblings().removeClass('text-light');
     })
 
 

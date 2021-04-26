@@ -1,7 +1,7 @@
-<div class="container">
-    <section class="event mt-5">
+<div class="container event">
+    <section class="">
 
-        <div class="row mt-5 text-center">
+        <div class="row  text-center">
             <div class="col mt-5 pt-5 d-flex justify-content-around">
                 <button class="btn  panel">All</button>
                 <button class="btn  panel">KOM 205</button>
@@ -15,7 +15,7 @@
             <?php for ($i = 0; $i < 5; $i++) : ?>
                 <div class="col-11 col-lg-4 mb-4">
 
-                    <div class="card border-0" onclick="window.location = '<?= base_url() ?>kelas'">
+                    <div class="card border-0" onclick="window.location = '<?= base_url('kelas')  ?>'">
                         <div class="card-body ">
                             <div class="thumbanail overflow-hidden mb-3" style="height:170px;">
                                 <img src="https://images.unsplash.com/photo-1560762484-813fc97650a0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt="">

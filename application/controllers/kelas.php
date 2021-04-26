@@ -7,7 +7,13 @@ class kelas extends CI_Controller
     {
         $data['title'] = 'Kelas';
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/navbar');
+        if ($this->session->userdata('email')) {
+            $data['user'] = $this->db->get_where('mahasiswa', ['email' => $this->session->userdata('email')])->row_array();
+
+            $this->load->view('pelajar/navbar', $data);
+        } else {
+            $this->load->view('templates/navbar');
+        }
         $this->load->view('kelas/index');
         $this->load->view('templates/footer');
     }
