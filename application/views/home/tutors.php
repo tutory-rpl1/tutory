@@ -1,7 +1,7 @@
 <div class="container mt-5 pt-5">
     <?php if (!$this->session->userdata('email')) : ?>
-        <div class="row part2">
-            <div class="col-12">
+        <div class="row  text-center">
+            <div class="col d-flex justify-content-around">
                 <h1 class="tutory">Dengan tutor yang hebat </h1>
             </div>
         </div>

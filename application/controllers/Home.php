@@ -14,6 +14,7 @@ class Home extends CI_Controller
     }
     public function index()
     {
+        $data['kelas'] = $this->db->get('kelas')->result_array();
         $data['tutors'] = $this->db->get('tutor')->result_array();
         $data['title'] = 'Tutory';
         $this->load->view('templates/header', $data);

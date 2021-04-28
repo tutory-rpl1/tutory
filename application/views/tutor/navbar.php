@@ -12,7 +12,7 @@
                     <button class="btn kelas" onclick="window.location = '<?= base_url('tutor/request')  ?>'">Request</button>
                 </div>
             </div>
-            <div onclick="window.location = '<?= base_url('tutor/profile')  ?>'" class="item-link img rounded-circle overflow-hidden ms-lg-4" style="width: 35px; height : 35px">
+            <div onclick="window.location = '<?= base_url('tutor')  ?>'" class="item-link img rounded-circle overflow-hidden ms-lg-4" style="width: 35px; height : 35px">
                 <img src="<?= base_url('assets/img/profile/') . $user['image'] ?>" alt="" width="100%">
             </div>
         </div>

@@ -14,6 +14,7 @@ class Pelajar extends CI_Controller
     }
     public function index()
     {
+        $data['kelas'] = $this->db->get('kelas')->result_array();
         $data['user'] = $this->db->get_where('mahasiswa', ['email' => $this->session->userdata('email')])->row_array();
         // echo 'Selamat datang pelajar ' . $data['user']['nama'];
         $data['title'] = 'Tutory';

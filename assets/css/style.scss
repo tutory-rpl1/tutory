@@ -160,16 +160,16 @@ hr {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
+.card-info-two{
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
 .gabung{
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    cursor: pointer;
     transition: .3s;
 }
-.gabung:hover{
-    background-color: $primary !important;
- 
-}
+
 .img-tutor{
     box-shadow: 0 0 20px rgba(0,0,0,1);
 }

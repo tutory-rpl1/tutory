@@ -86,4 +86,17 @@ class Tutor extends CI_Controller
             redirect('pelajar/profile');
         }
     }
+
+
+    public function buatKelas()
+    {
+        $data['matkul'] = $this->db->get('matkul')->result_array();
+        $data['user'] = $this->db->get_where('tutor', ['email' => $this->session->userdata('email')])->row_array();
+        $data['title'] = 'Buat Kelas';
+        $this->load->view('templates/header', $data);
+        $this->load->view('tutor/navbar', $data);
+        $this->load->view('tutor/buatkelas', $data);
+        $this->load->view('templates/about', $data);
+        $this->load->view('templates/footer');
+    }
 }

@@ -166,16 +166,16 @@ hr {
   border-top-right-radius: 50px;
 }
 
+.card-info-two {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
 .gabung {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
-}
-
-.gabung:hover {
-  background-color: #4064E5 !important;
 }
 
 .img-tutor {
@@ -312,4 +312,4 @@ hr {
     opacity: 1;
   }
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */
