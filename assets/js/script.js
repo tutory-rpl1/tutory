@@ -45,6 +45,7 @@ $(function(){
         //  console.log(selesai);
 
          let link =  $('.link').val();
+         let donasi =  $('.donasi').val();
         //  console.log(link);
      
         //  hitung mundur ke waktu mulai
@@ -100,10 +101,10 @@ $(function(){
          $('#udah').addClass('d-none');
          $('.join').html(`
          <a href="#"  id="udah" class="disabled fs-5 fw-700 bg-primary d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" aria-disabled="true">Kirim Ulasan</a>
-         <a href="#" id="udah" class="disabled fs-5 fw-700 gabung bg-warning d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" target="_blank" >Donasi</a>`);
+         <a href="http://saweria.co/`+ donasi +`" id="udah" class=" fs-5 fw-700 gabung bg-warning d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" target="_blank" >Donasi</a>`);
          $('.joins').html(`
          <a href="http://localhost/tutory/Auth"  id="udah" class="disabled fs-5 fw-700 bg-primary d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" aria-disabled="true">Kirim Ulasan</a>
-         <a href="http://localhost/tutory/Auth" id="udah" class="disabled fs-5 fw-700 gabung bg-warning d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white"  >Donasi</a>`);
+         <a href="http://saweria.co/`+ donasi +`" id="udah" class=" fs-5 fw-700 gabung bg-warning d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white"   target="_blank">Donasi</a>`);
 
         }
         

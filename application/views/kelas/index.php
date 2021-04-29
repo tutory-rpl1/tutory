@@ -52,7 +52,13 @@
                 </div>
             <?php endif; ?>
         </div>
+        <?php
+        $sawer = $this->db->get_where("tutor", ['nama' => $kelas['pembuat']])->row_array();
+
+        ?>
+
         <input type="hidden" class="waktuMulai" value="<?= $kelas['mulai'] ?>">
+        <input type="hidden" class="donasi" value="<?= $sawer['saweria'] ?>">
         <input type="hidden" class="link" value="<?= $kelas['link'] ?>">
         <input type="hidden" class="waktuSelesai" value="<?= $kelas['selesai'] ?>">
         <input type="hidden" class="tanggal" value="<?= $kelas['tanggal'] ?>">

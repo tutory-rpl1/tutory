@@ -36,7 +36,7 @@
             </div>
             <div class="mb-3">
                 <select class="form-select rounded-pill" name="matkul">
-                    <option selected disabled>Pilih mata kuliah yang mau di tutor</option>
+                    <option selected disabled><i> -- Pilih mata kuliah favorit kamu --</i></option>
                     <?php foreach ($matkul as $row) : ?>
                         <option value="<?= $row['matkul'] ?>"><?= $row['matkul'] ?>(<?= $row['kode_matkul'] ?>)</option>
                     <?php endforeach; ?>
@@ -45,12 +45,19 @@
 
             </div>
             <div class="mb-3">
-                <small style="font-size: .8em;" class="ms-3" for="fotoktm">Unggah capture IP matkul yang kamu pilih :</small>
+                <small style="font-size: .8em;" class="ms-3" for="fotoktm">Unggah Screenshot IPK di IPB Mobile :</small>
                 <input type="file" class="form-control rounded-pill mb-1" id="nilai" placeholder="" name="nilai">
                 <?php if ($this->session->flashdata('message')) : ?>
                     <?= $this->session->flashdata('message'); ?>
                     <?php unset($_SESSION['message']) ?>
                 <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label class="visually-hidden" for="telepon">Username</label>
+                <div class="input-group ">
+                    <div class="input-group-text" style="border-top-left-radius: 50rem;border-bottom-left-radius: 50rem;">+62</div>
+                    <input style="border-top-right-radius: 50rem !important;border-bottom-right-radius: 50rem !important;" name="no_telepon" type="text" class="form-control rounded" id="telepon" placeholder="8XXXXXXX">
+                </div>
             </div>
             <div class="mb-3">
                 <input type="text" class="form-control rounded-pill" id="email" name="email" placeholder="Email" value="<?= set_value('email') ?>">

@@ -128,6 +128,7 @@ class Auth extends CI_Controller
     {
         $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
         $this->form_validation->set_rules('fakultas', 'Fakultas', 'required|trim');
+        $this->form_validation->set_rules('no_telepon', 'Nomor telepon', 'required|trim');
         $this->form_validation->set_rules('jurusan', 'Jurusan', 'required|trim');
         $this->form_validation->set_rules('matkul', 'Matkul', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[tutor.email]|callback_email_check', [
@@ -173,6 +174,7 @@ class Auth extends CI_Controller
                 'nim' => htmlspecialchars($this->input->post('nim', true)),
                 'email' => htmlspecialchars($email),
                 'fakultas' => htmlspecialchars($this->input->post('fakultas', true)),
+                'no_telepon' => '62' . htmlspecialchars($this->input->post('no_telepon', true)),
                 'jurusan' => $this->input->post('jurusan', true),
                 'matkul' => $this->input->post('matkul', true),
                 'nilai' => $nilai,

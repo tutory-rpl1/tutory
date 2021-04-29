@@ -15,10 +15,36 @@
             <?php endif; ?>
             <div class="data mb-3 d-flex flex-column">
                 <h1><?= $user['nama'] ?></h1>
+
                 <span class="text-gray">Member since <?= date("s F Y", $user['date_created']) ?></span>
-                <span class="mt-3"><?= $user['overview'] ?></span>
+                <?php if ($user['overview'] == '' && $this->session->userdata('role_id') == 2) : ?>
+                    <div style="cursor: pointer;" class="alert alert-warning mt-3" onclick="window.location.href='<?= base_url('tutor/edit') ?>'" role="alert">
+                        <span>Tambahkan overview dan akun saweria anda agar anda dapat menerima donasi dari para pelajar</span>
+                    </div>
+                <?php else : ?>
+                    <span class="mt-3"><?= $user['overview'] ?></span>
+                <?php endif; ?>
                 <hr>
-                <span class="fw-bold">Keahlian :</span>
+                <?php if ($this->session->userdata('role_id') == 2) : ?>
+                    <span class="fw-bold">Link donasi saweria:</span>
+                    <?php if ($user['saweria'] == '') : ?>
+                        <div style="cursor: pointer;" class="alert alert-warning mt-3" onclick="window.location.href='<?= base_url('tutor/edit') ?>'" role="alert">
+                            <span>Tambahkan akun saweria anda agar anda dapat menerima donasi dari para pelajar</span>
+                        </div>
+                    <?php else : ?>
+                        <span><a class="badge bg-warning" style="text-decoration: none;" href="http://saweria.co/<?= $user['saweria'] ?>" target="_blank"><?= $user['saweria'] ?></a></span>
+                    <?php endif; ?>
+                <?php else : ?>
+                    <span class="fw-bold">Link donasi saweria:</span>
+                    <?php if ($user['saweria'] == '') : ?>
+                        <div style="cursor: pointer;" class="alert alert-warning mt-3" role="alert">
+                            <span>Tutor belum menambahkan link donasi</span>
+                        </div>
+                    <?php else : ?>
+                        <span><a style="text-decoration: none;" href="http://saweria.co/<?= $user['saweria'] ?>" target="_blank"><?= $user['saweria'] ?></a></span>
+                    <?php endif; ?>
+                <?php endif; ?>
+                <span class="fw-bold">Favorit :</span>
                 <span>Tutor <?= $user['matkul'] ?></span>
                 <span class="fw-bold">NIM :</span>
                 <span><?= $user['nim'] ?></span>
@@ -36,8 +62,8 @@
                 </div>
             <?php elseif ($this->session->userdata('role_id') == 3) : ?>
                 <div class="aksi">
-                    <button onclick="window.location = '<?= base_url('pelajar/reqTutorBareng')  ?>'" class="btn btn-primary">Request Tutor Bareng</button>
-                    <button onclick="window.location = '<?= base_url('pelajar/reqTutorBareng')  ?>'" class="btn btn-outline-primary">Request Tutor Private</button>
+                    <button onclick="window.location =  `https://api.whatsapp.com/send?phone=<?= $user['no_telepon'] ?>&text=Saya%20tertarik%20untuk%20tutor%20bareng`" class="btn btn-primary">Request Tutor Bareng</button>
+                    <button onclick="window.location = '<?= $user['no_telepon'] ?>'" class="btn btn-outline-primary">Request Tutor Private</button>
                 </div>
             <?php else : ?>
                 <div class="aksi">

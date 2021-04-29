@@ -27,7 +27,7 @@
                                 <div class="col-auto d-flex align-items-center">
 
                                     <i class="bi bi-alarm" style="width:32px;"></i>
-                                    <span><?= $row['mulai'] ?> WIB</span>
+                                    <span><?= date("H:i", strtotime($row['mulai'])) ?> WIB</span>
                                 </div>
                                 <div class="col-auto d-flex align-items-center">
                                     <i class="bi bi-calendar-event " style="width:32px;"></i>

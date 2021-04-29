@@ -45,6 +45,9 @@ class Tutor extends CI_Controller
             redirect('http://localhost/tutory/tutor/edit');
         } else {
             $name = $this->input->post('nama');
+            $saweria = $this->input->post('saweria');
+            $overview = $this->input->post('overview');
+            $no_telepon = '62' . $this->input->post('no_telepon');
             $email = $this->input->post('email');
             $nim = $this->input->post('nim');
             $jurusan = $this->input->post('jurusan');
@@ -76,6 +79,9 @@ class Tutor extends CI_Controller
                 }
             }
             $this->db->set('nama', $name);
+            $this->db->set('overview', $overview);
+            $this->db->set('no_telepon', $no_telepon);
+            $this->db->set('saweria', $saweria);
             $this->db->set('nim', $nim);
             $this->db->set('fakultas', $fakultas);
             $this->db->set('jurusan', $jurusan);

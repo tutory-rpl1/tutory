@@ -3,8 +3,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class kelas extends CI_Controller
 {
-    public function index($id)
+
+
+    public function index($id = 'NULL')
     {
+        if ($id == 'NULL') {
+
+            redirect('Home');
+        }
         $data['kelas'] = $this->db->get_where('kelas', ['id' => $id])->row_array();
         // var_dump($data['kelas']);
         // die;
