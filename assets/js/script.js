@@ -1,4 +1,4 @@
-$(function(){
+f$(function(){
 
 
     $('.menu').on('click', function(){
@@ -93,14 +93,14 @@ $(function(){
            $('.card-info').html(`
            <h3 class="fw-bold">Terima kasih telah bergabung ❤</h3>
            <hr>
-           <div class="form-floating">
+           <div class="form-floating"><form action="http://localhost/tutory/Auth/testi" method="post">
            <textarea class="form-control rounded" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-           <label for="floatingTextarea2">Beri ulasan untuk tutory</label>
-         </div>`);
+           <label for="floatingTextarea2">Beri ulasan untuk tutor</label>
+            </div>`);
          $('#belum').addClass('d-none');
          $('#udah').addClass('d-none');
          $('.join').html(`
-         <a href="#"  id="udah" class="disabled fs-5 fw-700 bg-primary d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" aria-disabled="true">Kirim Ulasan</a>
+         <button type="submit"  id="udah" class="disabled fs-5 fw-700 bg-primary d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" aria-disabled="true">Kirim Ulasan</button></form>
          <a href="http://saweria.co/`+ donasi +`" id="udah" class=" fs-5 fw-700 gabung bg-warning d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" target="_blank" >Donasi</a>`);
          $('.joins').html(`
          <a href="http://localhost/tutory/Auth"  id="udah" class="disabled fs-5 fw-700 bg-primary d-flex justify-content-center align-items-center" style="height: 75px;text-decoration : none; color : white" aria-disabled="true">Kirim Ulasan</a>
@@ -110,7 +110,6 @@ $(function(){
         
         }, 1000);
     
-     
-
+     alert('oke');
      
 });

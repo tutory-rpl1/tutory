@@ -196,6 +196,11 @@ class Auth extends CI_Controller
         echo json_encode($this->db->get_where('jurusan', array('fakultas_id' => $_POST['id']))->result_object());
     }
 
+    public function testi()
+    {
+        echo 'halo';
+    }
+
     public function logout()
     {
         $this->session->unset_userdata('email');

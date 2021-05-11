@@ -8,17 +8,14 @@
                 <div class="item-link me-4">
                     <button class="btn kelas" onclick="window.location = '<?= base_url('tutor/buatKelas')  ?>'">Buat Kelas</button>
                 </div>
-                <div class="item-link me-4">
-                    <button class="btn kelas" onclick="window.location = '<?= base_url('tutor/request')  ?>'">Request</button>
-                </div>
             </div>
             <div onclick="window.location = '<?= base_url('tutor')  ?>'" class="me-4 item-link img rounded-circle overflow-hidden ms-lg-4" style="width: 35px; height : 35px">
                 <img src="<?= base_url('assets/img/profile/') . $user['image'] ?>" alt="" width="100%">
             </div>
             <div>
-                <button onclick="window.location = '<?= base_url('Auth/logout')  ?>'" class="btn btn-danger btn-sm">
+                <a href="<?= base_url('Auth/logout')  ?>" onclick="return confirm('Mau Keluar ?')" class="btn btn-danger btn-sm">
                     <i class=" fw-bold item-link  bi bi-box-arrow-right"></i>
-                </button>
+                </a>
             </div>
         </div>
         <div class="menu d-lg-none d-flex">

@@ -87,4 +87,6 @@ class kelas extends CI_Controller
             redirect("Tutor");
         }
     }
+
+    
 }

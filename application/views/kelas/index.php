@@ -1,10 +1,26 @@
 <div class="container mb-5 pt-5">
     <div class="row text-center mb-4">
         <div class="col">
-            <h1>Kelas <?= $kelas['kelas'] ?></h1>
-            <span>Oleh <a href="" style="text-decoration: none;" class="text-primary fw-bold"><?= $kelas['pembuat'] ?></a></span>
+            <?php
+            $data = $this->db->get_where('tutor', ['nama' => $kelas['pembuat']])->row_array();
+            ?>
+            <h1>Kelas <?= $kelas['nama_kelas'] ?></h1>
+            <?php if ($this->session->userdata('role_id') == 3) : ?>
+                <span>Oleh <a href="<?= base_url('pelajar/detailTutor/') . $data['id'] ?>" style="text-decoration: none;" class="text-primary fw-bold"><?= $kelas['pembuat'] ?></a></span>
+
+            <?php else : ?>
+                <span>Oleh <a href="<?= base_url('home/viewTutor/') . $data['id'] ?>" style="text-decoration: none;" class="text-primary fw-bold"><?= $kelas['pembuat'] ?></a></span>
+            <?php endif; ?>
         </div>
     </div>
+    <?php if ($this->session->userdata('role_id') == 2) : ?>
+        <div class="row mb-3 text-center justify-content-center">
+            <div class="col-4">
+                <a href="<?= base_url('tutor/editkelas/') . $kelas['id'] ?>" class="btn btn-success">Edit</a>
+                <a href="<?= base_url('tutor/hapuskelas/') . $kelas['id'] ?>" onclick="return confirm('Are u sure ?')" class="btn btn-danger">Hapus</a>
+            </div>
+        </div>
+    <?php endif; ?>
     <div class="row mb-4 text-center">
         <span class="ket">Dimulai dalam :</span>
         <h3 class="time fw-bold"></h3>

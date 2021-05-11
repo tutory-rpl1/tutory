@@ -17,9 +17,9 @@
                 <img src="<?= base_url('assets/img/profile/') . $user['image'] ?>" alt="" width="100%">
             </div>
             <div>
-                <button onclick="window.location = '<?= base_url('Auth/logout')  ?>'" class="btn btn-danger btn-sm">
+                <a href="<?= base_url('Auth/logout')  ?>" onclick="return confirm('Mau Keluar ?')" class="btn btn-danger btn-sm">
                     <i class=" fw-bold item-link  bi bi-box-arrow-right"></i>
-                </button>
+                </a>
             </div>
         </div>
         <div class="menu d-lg-none d-flex">
