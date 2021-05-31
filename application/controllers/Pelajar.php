@@ -122,4 +122,17 @@ class Pelajar extends CI_Controller
             redirect('pelajar/profile');
         }
     }
+
+    public function cariTutor()
+    {
+        $this->db->select('*');
+        $this->db->from('tutor');
+        $this->db->like('nama', $_POST['inp']);
+        $query = $this->db->get();
+        if ($query != " ") {
+            echo json_encode($query->result_object());
+        } else {
+            echo 'Data tidak ditemukan';
+        }
+    }
 }

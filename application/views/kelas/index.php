@@ -36,7 +36,12 @@
 
         </div>
         <div class="col-lg-6 mt-lg-0 mt-4  fadein">
-
+            <?php if ($this->session->userdata('role_id') == 3) : ?>
+                <?= form_open_multipart('auth/testi'); ?>
+                <input type="hidden" name="nama" class="nama" value="<?= $user['nama'] ?>">
+                <input type="hidden" name="gambar" class="gambar" value="<?= $user['image'] ?>">
+                <input type="hidden" name="nimn" class="nimn" value="<?= $user['nim'] ?>">
+            <?php endif; ?>
             <div class="card-info p-4" style="background-color: white; width : 100%;">
                 <div class="row d-flex flex-lg-column justify-content-between">
                     <div class="col-auto">

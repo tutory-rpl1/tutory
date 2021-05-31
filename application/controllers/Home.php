@@ -16,6 +16,7 @@ class Home extends CI_Controller
     {
         $data['kelas'] = $this->db->get('kelas')->result_array();
         $data['tutors'] = $this->db->get('tutor')->result_array();
+        $data['testimoni'] = $this->db->get('testimoni')->result_array();
         $data['title'] = 'Tutory';
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar', $data);

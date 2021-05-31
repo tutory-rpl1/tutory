@@ -5,12 +5,12 @@
 
         <div class="links d-flex align-items-center flex-lg-row flex-column-reverse justify-content-center">
             <div class="d-lg-flex text-center">
-                <div class="item-link me-4">
+                <div class="item-link me-4 panel">
                     <button class="text-black btn
-                    tutor" onclick="window.location = '<?= base_url('pelajar/viewTutor')  ?>'">Tutor</button>
+                    tutor " onclick="window.location = '<?= base_url('pelajar/viewTutor')  ?>'">Tutor</button>
                 </div>
-                <div class="item-link me-4">
-                    <button class="btn kelas" onclick="window.location = '<?= base_url('pelajar')  ?>'">Kelas</button>
+                <div class="item-link me-4 panel">
+                    <button class="btn kelas " onclick="window.location = '<?= base_url('pelajar')  ?>'">Kelas</button>
                 </div>
             </div>
             <div onclick="window.location = '<?= base_url('pelajar/profile')  ?>'" class="me-4 item-link img rounded-circle overflow-hidden ms-lg-4" style="width: 35px; height : 35px">

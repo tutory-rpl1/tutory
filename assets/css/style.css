@@ -220,96 +220,42 @@ hr {
   cursor: pointer !important;
 }
 
-.fadein {
-  -webkit-animation: fadein .6s linear alternate forwards;
-          animation: fadein .6s linear alternate forwards;
+.panel,
+.panels {
+  position: relative;
 }
 
-.bounce {
-  -webkit-animation: bounce .3s linear alternate forwards;
-          animation: bounce .3s linear alternate forwards;
+.panel::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-.slideright {
-  -webkit-animation: slideright  .6s  linear alternate forwards;
-          animation: slideright  .6s  linear alternate forwards;
+.panel:hover::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: blue;
+  bottom: 0;
+  left: 0;
 }
 
-@-webkit-keyframes fadein {
-  from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes bounce {
-  from {
-    -webkit-transform: scale(3);
-            transform: scale(3);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes bounce {
-  from {
-    -webkit-transform: scale(3);
-            transform: scale(3);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes slideright {
-  from {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideright {
-  from {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
+.panels::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 /*# sourceMappingURL=style.css.map */

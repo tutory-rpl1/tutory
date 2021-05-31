@@ -1,4 +1,4 @@
-<div class="container mt-5 pt-5">
+<div class="container mt-5 pt-5" style="min-height: 100vh;">
     <?php if (!$this->session->userdata('email')) : ?>
         <div class="row  text-center">
             <div class="col d-flex justify-content-around">
@@ -14,7 +14,7 @@
         </div>
     <?php endif; ?>
 
-    <div class="row mt-5 d-flex justify-content-center text-center">
+    <div class="row cariTutor mt-5 d-flex justify-content-center text-center">
         <?php foreach ($tutors as $tutor) : ?>
             <div class="col-md-4 foto-tutor mb-5 d-flex align-items-center flex-column">
                 <?php if ($this->session->userdata('role_id') == 3) : ?>

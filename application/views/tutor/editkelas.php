@@ -14,7 +14,6 @@
     border-top-right-radius: 50px;">
                 <div class="img-tutor overflow-hidden rounded-circle" style="width:200px; height:200px;">
                     <img src="<?= base_url('assets/img/profile/') ?><?= $user['image']; ?>" alt="" width="100%">
-
                 </div>
             </div>
             <div class="card-info-two p-4" style="background-color: white; width : 100%;border-bottom-left-radius: 50px;

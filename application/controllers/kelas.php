@@ -71,7 +71,7 @@ class kelas extends CI_Controller
             $data = [
                 'pembuat' => htmlspecialchars($this->input->post('pembuat', true)),
                 'foto_pembuat' => htmlspecialchars($this->input->post('foto_pembuat', true)),
-                'kelas' => htmlspecialchars($this->input->post('kelas', true)),
+                'nama_kelas' => htmlspecialchars($this->input->post('kelas', true)),
                 'deskripsi' => htmlspecialchars($this->input->post('deskripsi', true)),
                 'tanggal' => htmlspecialchars($this->input->post('tanggal', true)),
                 'mulai' => htmlspecialchars($this->input->post('mulai', true)),
@@ -87,6 +87,4 @@ class kelas extends CI_Controller
             redirect("Tutor");
         }
     }
-
-    
 }

@@ -5,8 +5,8 @@
 
         <div class="links d-flex align-items-center flex-lg-row flex-column-reverse justify-content-center">
             <div class="d-lg-flex text-center">
-                <div class="item-link me-4">
-                    <button class="btn kelas" onclick="window.location = '<?= base_url('tutor/buatKelas')  ?>'">Buat Kelas</button>
+                <div class="item-link me-4 <?php if ($user['is_active'] == 1) echo 'panel' ?>">
+                    <button class="btn kelas" <?php if ($user['is_active'] == 0) : ?> <?= 'disabled' ?> <?php else : ?> onclick="window.location = '<?= base_url('tutor/buatKelas')  ?>'" <?php endif; ?>>Buat Kelas</button>
                 </div>
             </div>
             <div onclick="window.location = '<?= base_url('tutor')  ?>'" class="me-4 item-link img rounded-circle overflow-hidden ms-lg-4" style="width: 35px; height : 35px">

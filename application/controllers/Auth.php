@@ -198,7 +198,16 @@ class Auth extends CI_Controller
 
     public function testi()
     {
-        echo 'halo';
+        $data = array(
+            'nama' => htmlspecialchars($this->input->post('nama', true)),
+            'image' => $_POST['gambar'],
+            'nim' => $_POST['nim'],
+            'ulasan' => $_POST['testimoni']
+        );
+
+        $this->db->insert('testimoni', $data);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Ulasan anda terkirim !</div>');
+        redirect('pelajar');
     }
 
     public function logout()

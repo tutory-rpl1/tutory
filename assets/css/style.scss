@@ -205,50 +205,39 @@ hr {
      cursor: pointer !important;
  }
 
+ .panel,
+ .panels {
+     position: relative;
+ }
 
+ .panel::after {
+     content: '';
+     position: absolute;
+     height: 3px;
+     width: 0;
+     background-color: blue;
+     bottom: 0;
+     left: 0;
+     transition: .3s;
+ }
 
-// ANIMATION
-.fadein{
-    // display: none !important;
-    animation: fadein .6s linear alternate forwards ;
-}
-.bounce{
-    animation: bounce .3s linear alternate forwards ;
-}
-.slideright{
-    animation: slideright  .6s  linear alternate forwards ;
-}
-@keyframes fadein {
-    from {
-        transform: translateY(20px) ;
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0px) scale(1);
-        opacity: 1;
-    }
-}
+ .panel:hover::after {
+     content: '';
+     position: absolute;
+     height: 3px;
+     width: 100%;
+     background-color: blue;
+     bottom: 0;
+     left: 0;
+ }
 
-@keyframes bounce {
-    from {
-        transform: scale(3) ;
-        opacity: 0;
-    }
-    to {
-        transform:  scale(1);
-        opacity: 1;
-
-    }
-}
-
-@keyframes slideright {
-    from {
-        transform: translateX(-100px) ;
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0) ;
-        opacity: 1;
-
-    }
-}
+ .panels::after {
+     content: '';
+     position: absolute;
+     height: 3px;
+     width: 100%;
+     background-color: blue;
+     bottom: 0;
+     left: 0;
+     transition: .3s;
+ }
