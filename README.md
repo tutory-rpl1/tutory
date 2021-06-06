@@ -1,6 +1,6 @@
 <h1>Laporan Akhir Projek</h1>
 
-<h1>Tutory</h1>
+# Tutory
 	
 <h1>Kelompok 1</h1>
 
@@ -58,7 +58,7 @@ Lainnya
 
 <h2>Hasil dan Pembahasan:</h2>
 
-* <h3>Use case diagram</h3>
+* <h3>Use Case Diagram</h3>
   
   ![usecase](https://user-images.githubusercontent.com/66354722/120913503-d0436e80-c6c1-11eb-855b-095775e7c5c2.png)
 
@@ -66,7 +66,7 @@ Lainnya
   
   ![flowchart](https://user-images.githubusercontent.com/66354722/120913520-e05b4e00-c6c1-11eb-9936-656003ccb571.png)
  
-* <h3>Class diagram</h3>
+* <h3>Class Diagram</h3>
   
   ![class](https://user-images.githubusercontent.com/66354722/120913528-e81af280-c6c1-11eb-892f-2db6b76bace5.png)
  
@@ -74,8 +74,11 @@ Lainnya
   
   ![erd](https://user-images.githubusercontent.com/66354722/120913538-f23cf100-c6c1-11eb-920a-5c7d6c895959.png)
   
-* <h3>Arsitektur sistem</h3>
+* <h3>Arsitektur Sistem</h3>
 Web Apps tutory pastinya menggunakan teknologi basic dari HTML, CSS, Javascript, jquery dan PHP, untuk mempermudah styling web apps kami menggunakan bantuan BOOTSRAP pada sisi framework untuk frontendnya dan pada sisi backend kami menggunakan bantuan framework CODEIGNITER.
+
+![Arsitektur Diagram](https://user-images.githubusercontent.com/66354722/120925338-613a3a00-c702-11eb-8d72-6e84e50d1f97.jpg)
+
 	
 * <h3>Fungsi utama yang dikembangkan</h3>
 Web Apps-Tutory ini memiliki sebuah fitur utama, dimana tutory membantu para pelajar menemukan tutor atau kelas yang sesuai  serta membantu pelajar mendapatkan pengalaman pembelajaran yang lebih baik.
@@ -104,12 +107,16 @@ Delete | _ | Tutor dapat menghapus kelas yang telah dibuat
   http://tutory.epizy.com/
 
 <h2>Testing</h2>
-Positive Cases
 
-* 
-
-Negative Cases
-
-*
+Case | Positive Case | Negative Case
+------ | ----------------- | -------
+Registration Page | User memasukkan data dengan lengkap dan form validation bernilai true, lalu user ditujukan ke halaman login | Jika form validation bernilai false, maka akan muncul pesan kesalahan pada form registrasi
+Login Page | Jika data yang dimasukkan user ada dan sesuai dengan data pada database, maka user akan diarahkan ke halaman tutor atau pelajar (secara default sesi session user akan aktif) | Jika data yang dimasukkan user tidak ada atau tidak sesuai dengan data pada database, maka akan muncul pesan kesalahan 
+Create Tutor Class Page | Jika data yang dimasukkan tutor lengkap, maka class akan dibuat dan ditambahkan pada database | Jika data yang dimasukkan tutor tidak lengkap, maka class tidak akan dibuat dan ditambahkan pada databse, lalu pesan kesalahan akan muncul. Kemudian tutor akan dikembalikan ke page pembuatan kelas
 
 <h2>Saran untuk Pengembangan Selanjutnya</h2>
+  
+  * Kedepannya mungkin bisa ditambahkan sistem pembayaran yang jadi satu dengan webnya, agar user lebih mudah dalam transaksi dengan user lain
+  * Kedepannya terdapat API login dengan Google, sehingga memudahkan dalam daftar dan login.
+  * Kedepanya Tutory memiliki fitur live chat dengan sesama user, sehingga memudahkan komunikasi user
+  * Kedepannya terdapat fitur filter, agar memudahkan dalam mencari kelas atau tutor
