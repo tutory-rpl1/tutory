@@ -99,9 +99,20 @@ Delete | _ | Tutor dapat menghapus kelas yang telah dibuat
 
 * Screenshot Sistem
   
+  Tampilan Dekstop
+  
   ![ss](https://user-images.githubusercontent.com/66354722/120913550-01bc3a00-c6c2-11eb-9d77-29f2ad832ac5.png)
-
-
+  
+  ![ezgif com-gif-maker](https://user-images.githubusercontent.com/66354722/120927562-7a93b400-c70b-11eb-82b3-ddb89bca7706.gif)
+  
+  Tampilan Mobile
+  
+  <img src="https://user-images.githubusercontent.com/66354722/120926633-f1c74900-c707-11eb-8acd-84e72eb548f1.jpeg" width="200">
+  
+  <img src="https://user-images.githubusercontent.com/66354722/120926643-f5f36680-c707-11eb-9679-ccd76a230aa2.jpeg" width="200">
+  
+  <img src="https://user-images.githubusercontent.com/66354722/120926646-f7249380-c707-11eb-99a8-f71adb171c6d.jpeg" width="200">
+  
 * Link Aplikasi
 
   http://tutory.epizy.com/
